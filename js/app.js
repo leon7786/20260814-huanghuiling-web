@@ -1,4 +1,4 @@
-// Top 5 Zhuhai Departure Self-Driving Routes Data
+// TOP 6 Zhuhai Departure Self-Driving Routes Data
 const routesData = [
   {
     id: 1,
@@ -117,6 +117,30 @@ const routesData = [
       { day: "Day 9", title: "八宿 ➔ 然乌湖 ➔ 米堆冰川 ➔ 波密", distance: "220 km / 4.5h", desc: "游览然乌湖圣湖倒影与米堆冰川巨大冰瀑布，驶入波密岗云杉林。", food: "波密藏猪肉、野生菌炖鸡" },
       { day: "Day 10", title: "波密 ➔ 鲁朗小镇 ➔ 林芝（八一镇）", distance: "230 km / 4.5h", desc: "穿过通麦特大桥，在鲁朗享用墨脱石锅鸡，翻越色季拉山远眺南迦巴瓦峰。", food: "鲁朗石锅鸡、藏香猪" },
       { day: "Day 11-12", title: "林芝 ➔ 羊卓雍措 ➔ 终点拉萨", distance: "400 km / 4.5h", desc: "沿林拉高速驶达圣城拉萨，游览羊卓雍措碧蓝圣湖，在布达拉宫广场圆梦！", food: "光明港琼甜茶、藏家炸羊排" }
+    ]
+  },
+  {
+    id: 6,
+    title: "路线六：珠海直达拉萨·珠峰·阿里30天终极环线",
+    subtitle: "滇藏进/青藏出 · 布达拉宫 · 珠峰大本营 · 冈仁波齐/古格王朝 · 纳木措 · 可可西里 · 青海湖",
+    duration: "epic30",
+    durationText: "30 天大满贯",
+    theme: "epic",
+    themeText: "史诗进藏",
+    seasonText: "5-6月 / 9-10月",
+    distance: 8200,
+    tolls: 2100,
+    stops: "珠海 ➔ 滇藏线 ➔ 拉萨 ➔ 羊湖 ➔ 珠峰大本营 ➔ 冈仁波齐 ➔ 纳木措 ➔ 青藏线 ➔ 青海湖 ➔ 珠海",
+    highlights: ["珠穆朗玛峰大本营", "神山冈仁波齐/扎达土林", "羊湖/纳木措/玛旁雍措", "可可西里无人区边缘", "青海湖/塔尔寺/甘南"],
+    budgetPerPerson: "14,300 - 23,150",
+    itinerary: [
+      { day: "Day 1-7", title: "第一阶段：珠海出发 ➔ 滇藏线阶梯进藏拉练", distance: "2350 km", desc: "途径广西百色、昆明滇池、大理洱海、丽江古城、香格里拉独克宗、德钦飞来寺（看梅里日照金山），汇入芒康G318。", food: "云南过桥米线、大理酸辣鱼、藏式牦牛肉火锅、盐井加加面" },
+      { day: "Day 8-12", title: "第二阶段：川藏/滇藏精华段 ➔ 圣城拉萨", distance: "1390 km", desc: "挑战怒江72拐，游览然乌湖、米堆冰川、波密岗云杉林，在鲁朗吃石锅鸡，沿林拉高速直达拉萨。", food: "鲁朗石锅鸡、波密藏香猪、拉萨甜茶" },
+      { day: "Day 13-14", title: "第三阶段：拉萨朝圣 ➔ 羊卓雍措 ➔ 日喀则", distance: "350 km", desc: "游览布达拉宫、大昭寺、八廓街。次日翻越冈巴拉山口打卡羊湖与满拉水库，抵达日喀则。", food: "拉萨藏家炸羊排、酸奶蛋糕" },
+      { day: "Day 15-16", title: "第四阶段：日喀则 ➔ 加乌拉山口 ➔ 珠峰大本营 ➔ 萨嘎", distance: "640 km", desc: "参观扎什伦布寺，翻越加乌拉山口远眺5座8000米雪山，宿珠峰大本营观日出星空，途径佩枯措至萨嘎。", food: "川菜大排档、高原石锅鸡" },
+      { day: "Day 17-20", title: "第五阶段：阿里神山圣湖（冈仁波齐/古格王朝）", distance: "1790 km", desc: "游览圣湖玛旁雍措与鬼湖拉昂措，仰望神山冈仁波齐，穿越扎达土林探秘千古古格王朝遗址。", food: "藏式手抓羊肉、风干牦牛肉" },
+      { day: "Day 21-25", title: "第六阶段：纳木措 ➔ 青藏线(G109) ➔ 可可西里 ➔ 青海湖", distance: "1860 km", desc: "游览纳木措，翻越唐古拉山口(5231m)，穿越可可西里无人区边缘看藏羚羊，打卡察尔汗与青海湖。", food: "手抓羊肉、青海酿皮、牦酸奶" },
+      { day: "Day 26-30", title: "第七阶段：甘南拉卜楞寺 ➔ 成都 ➔ 荣耀返程珠海", distance: "2530 km", desc: "朝圣塔尔寺与拉卜楞寺，途径若尔盖草原降至成都吃火锅休整，走厦蓉与广珠西线高速回珠海。", food: "四川麻辣火锅、成都小吃、贵州丝娃娃" }
     ]
   }
 ];
@@ -317,7 +341,7 @@ function calculateBudget() {
   // Energy
   let fuelCost = 0;
   if (engineType === "gas") {
-    fuelCost = (distance / 100) * 8.0 * 8.2;
+    fuelCost = (distance / 100) * 8.5 * 8.2;
   } else if (engineType === "ev") {
     fuelCost = (distance / 100) * 16.0 * 1.2;
   } else if (engineType === "phev") {
