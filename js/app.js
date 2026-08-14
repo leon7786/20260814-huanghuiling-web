@@ -7,7 +7,7 @@ const routesData = [
     duration: "short",
     durationText: "6 - 8 天",
     theme: "coastal",
-    themeText: "滨海沙滩",
+    themeText: "滨海风光",
     seasonText: "10月 - 次年4月",
     distance: 1500,
     tolls: 550,
@@ -30,7 +30,7 @@ const routesData = [
     duration: "short",
     durationText: "5 - 7 天",
     theme: "food",
-    themeText: "潮汕美食",
+    themeText: "饕餮美食",
     seasonText: "全年皆宜",
     distance: 1200,
     tolls: 600,
@@ -52,7 +52,7 @@ const routesData = [
     duration: "medium",
     durationText: "7 - 9 天",
     theme: "karst",
-    themeText: "喀斯特山水",
+    themeText: "山水民族",
     seasonText: "4月 - 10月",
     distance: 1800,
     tolls: 900,
@@ -76,7 +76,7 @@ const routesData = [
     duration: "short",
     durationText: "4 - 6 天",
     theme: "karst",
-    themeText: "丹霞峰林",
+    themeText: "山水民族",
     seasonText: "3月 - 11月",
     distance: 1200,
     tolls: 650,
@@ -98,7 +98,7 @@ const routesData = [
     duration: "long",
     durationText: "12 - 16 天",
     theme: "epic",
-    themeText: "史诗高原",
+    themeText: "史诗进藏",
     seasonText: "4-6月 / 9-11月",
     distance: 3800,
     tolls: 950,
@@ -121,12 +121,13 @@ const routesData = [
   }
 ];
 
-// UI Interactions & Event Listeners
+// App Init
 document.addEventListener("DOMContentLoaded", () => {
   renderRoutes(routesData);
-  initFilters();
+  initFiltersAndSearch();
   initModal();
   initCalculator();
+  initChecklist();
 });
 
 // Render Route Cards
@@ -135,7 +136,7 @@ function renderRoutes(routes) {
   if (!container) return;
 
   if (routes.length === 0) {
-    container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 40px;">没有找到符合条件的自驾路线</div>`;
+    container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 40px;">没有找到符合搜索条件的自驾路线</div>`;
     return;
   }
 
@@ -150,45 +151,63 @@ function renderRoutes(routes) {
         <h3 class="route-title">${route.title}</h3>
         <div class="route-meta-row">
           <span class="meta-item">🛣️ 约 ${route.distance} 公里</span>
-          <span class="meta-item">🚘 建议自驾</span>
+          <span class="meta-item">🚘 珠海离珠</span>
         </div>
         <div class="route-stops">
-          📍 <strong>主要站点：</strong><br>${route.stops}
+          📍 <strong>路线途经站点：</strong><br>${route.stops}
         </div>
       </div>
       <div class="route-card-footer">
-        <div class="budget-estimate">人均参考: <span class="budget-num">¥${route.budgetPerPerson}</span></div>
-        <button class="btn-detail">查看详细行程 ➔</button>
+        <div class="budget-estimate">人均预估: <span class="budget-num">¥${route.budgetPerPerson}</span></div>
+        <button class="btn-detail">查看行程明细 ➔</button>
       </div>
     </div>
   `).join('');
 }
 
-// Filter Logic
-function initFilters() {
+// Filter and Search Logic
+function initFiltersAndSearch() {
+  const searchInput = document.getElementById("searchInput");
   const filterBtns = document.querySelectorAll(".filter-btn");
+
   let currentDuration = "all";
   let currentTheme = "all";
+  let searchText = "";
+
+  function applyFilters() {
+    const filtered = routesData.filter(r => {
+      const matchDuration = currentDuration === "all" || r.duration === currentDuration;
+      const matchTheme = currentTheme === "all" || r.theme === currentTheme;
+      const matchSearch = !searchText || 
+        r.title.includes(searchText) || 
+        r.subtitle.includes(searchText) || 
+        r.stops.includes(searchText) || 
+        r.highlights.some(h => h.includes(searchText));
+      return matchDuration && matchTheme && matchSearch;
+    });
+
+    renderRoutes(filtered);
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchText = e.target.value.trim();
+      applyFilters();
+    });
+  }
 
   filterBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", () => {
       const group = btn.dataset.filter;
       const val = btn.dataset.value;
 
-      // Toggle active status in group
       btn.parentElement.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
       if (group === "duration") currentDuration = val;
       if (group === "theme") currentTheme = val;
 
-      const filtered = routesData.filter(r => {
-        const matchDuration = currentDuration === "all" || r.duration === currentDuration;
-        const matchTheme = currentTheme === "all" || r.theme === currentTheme;
-        return matchDuration && matchTheme;
-      });
-
-      renderRoutes(filtered);
+      applyFilters();
     });
   });
 }
@@ -205,24 +224,24 @@ function openRouteModal(id) {
   modalHeader.innerHTML = `
     <h2 class="modal-title">${route.title}</h2>
     <p class="modal-subtitle">${route.subtitle}</p>
-    <div style="display: flex; gap: 12px; margin-top: 12px; font-size: 13px; color: var(--primary);">
-      <span>📍 里程: 约 ${route.distance} km</span>
-      <span>⏱️ 推荐天数: ${route.durationText}</span>
-      <span>🏷️ 预算: ¥${route.budgetPerPerson} / 人</span>
+    <div style="display: flex; gap: 16px; margin-top: 14px; font-size: 13px; color: var(--primary);">
+      <span>📍 路线总长: 约 ${route.distance} km</span>
+      <span>⏱️ 规划天数: ${route.durationText}</span>
+      <span>🏷️ 费用预估: ¥${route.budgetPerPerson} / 人</span>
     </div>
   `;
 
   modalBody.innerHTML = `
-    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 20px;">🗓️ 每日详细行程与打卡清单</h3>
+    <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 20px; color: var(--text-main);">🗓️ 每日详细行程与地道美食指南</h3>
     <div class="timeline">
       ${route.itinerary.map(item => `
         <div class="timeline-item">
           <div class="timeline-day">${item.day}</div>
           <div class="timeline-content">
             <div class="tl-title">${item.title}</div>
-            <div class="tl-meta">🚗 车程/里程: ${item.distance}</div>
+            <div class="tl-meta">🚗 里程/车程: ${item.distance}</div>
             <div class="tl-desc">${item.desc}</div>
-            <div class="tl-food">🍜 美食推荐: ${item.food}</div>
+            <div class="tl-food">🍜 推荐体验美食: ${item.food}</div>
           </div>
         </div>
       `).join('')}
@@ -237,10 +256,7 @@ function initModal() {
   const modal = document.getElementById("routeModal");
   const closeBtn = document.getElementById("modalClose");
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeModal);
-  }
-
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
   if (modal) {
     modal.addEventListener("click", (e) => {
       if (e.target === modal) closeModal();
@@ -268,10 +284,12 @@ function initCalculator() {
   const selectHotel = document.getElementById("calcHotel");
   const selectFood = document.getElementById("calcFood");
 
-  const elementsToWatch = [selectRoute, selectEngine, inputPeople, selectHotel, selectFood];
-  elementsToWatch.forEach(el => {
-    if (el) el.addEventListener("change", calculateBudget);
-    if (el && el.tagName === "INPUT") el.addEventListener("input", calculateBudget);
+  const elements = [selectRoute, selectEngine, inputPeople, selectHotel, selectFood];
+  elements.forEach(el => {
+    if (el) {
+      el.addEventListener("change", calculateBudget);
+      if (el.tagName === "INPUT") el.addEventListener("input", calculateBudget);
+    }
   });
 
   calculateBudget();
@@ -291,33 +309,30 @@ function calculateBudget() {
   let tolls = parseFloat(selectedOpt.dataset.tolls) || 600;
   let days = parseFloat(selectedOpt.dataset.days) || 6;
 
-  const people = parseInt(inputPeople.value) || 2;
+  const people = Math.max(1, parseInt(inputPeople.value) || 2);
   const hotelRate = parseFloat(selectHotel.value) || 550;
   const foodRate = parseFloat(selectFood.value) || 220;
   const engineType = selectEngine.value;
 
-  // Fuel / Energy Cost
+  // Energy
   let fuelCost = 0;
   if (engineType === "gas") {
-    fuelCost = (distance / 100) * 8 * 8.2; // 8L/100km @ ¥8.2/L
+    fuelCost = (distance / 100) * 8.0 * 8.2;
   } else if (engineType === "ev") {
-    fuelCost = (distance / 100) * 16 * 1.2; // 16kWh/100km @ ¥1.2/kWh
+    fuelCost = (distance / 100) * 16.0 * 1.2;
   } else if (engineType === "phev") {
     fuelCost = (distance / 100) * 4.5 * 8.2;
   }
 
-  // Accommodation Cost (Assuming 2 people per room)
+  // Hotel rooms (2 people per room)
   const rooms = Math.ceil(people / 2);
   const hotelCost = rooms * hotelRate * days;
-
-  // Food Cost
   const foodCost = people * foodRate * days;
 
-  // Total & Per Person
   const totalCost = fuelCost + tolls + hotelCost + foodCost;
   const perPerson = totalCost / people;
 
-  // Update UI
+  // Render UI
   document.getElementById("totalAmount").innerText = `¥ ${Math.round(totalCost).toLocaleString()}`;
   document.getElementById("perPersonAmount").innerText = `¥ ${Math.round(perPerson).toLocaleString()}`;
   document.getElementById("peopleCountText").innerText = people;
@@ -326,4 +341,29 @@ function calculateBudget() {
   document.getElementById("bdTolls").innerText = `¥ ${Math.round(tolls).toLocaleString()}`;
   document.getElementById("bdHotel").innerText = `¥ ${Math.round(hotelCost).toLocaleString()}`;
   document.getElementById("bdFood").innerText = `¥ ${Math.round(foodCost).toLocaleString()}`;
+
+  // Update Progress Bar
+  const fuelPct = (fuelCost / totalCost) * 100;
+  const tollsPct = (tolls / totalCost) * 100;
+  const hotelPct = (hotelCost / totalCost) * 100;
+  const foodPct = (foodCost / totalCost) * 100;
+
+  document.getElementById("barFuel").style.width = `${fuelPct}%`;
+  document.getElementById("barTolls").style.width = `${tollsPct}%`;
+  document.getElementById("barHotel").style.width = `${hotelPct}%`;
+  document.getElementById("barFood").style.width = `${foodPct}%`;
+}
+
+// Checklist LocalStorage Persistence
+function initChecklist() {
+  const checkboxes = document.querySelectorAll(".chk-item");
+  
+  checkboxes.forEach(chk => {
+    const saved = localStorage.getItem(`zhuhai_chk_${chk.id}`);
+    if (saved === "true") chk.checked = true;
+
+    chk.addEventListener("change", () => {
+      localStorage.setItem(`zhuhai_chk_${chk.id}`, chk.checked);
+    });
+  });
 }

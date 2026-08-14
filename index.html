@@ -4,158 +4,180 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>珠海出发 · TOP 5 中国自驾游精品攻略</title>
-  <meta name="description" content="从珠海出发的 TOP 5 自驾游路线规划，涵盖粤西海南、粤东潮汕、桂林贵州、粤北湘赣及史诗滇藏线。">
+  <meta name="description" content="珠海出发 TOP 5 精选中国自驾游路线：粤西海南、粤东潮汕、桂林贵州、粤北湘赣、彩云之南滇藏线。全段里程、每日行程、美食预算及离珠干线全规划。">
+  <meta name="keywords" content="珠海自驾游, 珠海出发, 海南自驾, 潮汕自驾, 桂林自驾, 滇藏线自驾, 离珠干线">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <span>🚘 2026 最新规划 · 珠海出发全网最全 TOP 5 自驾路线指南 & 线上预算计算器</span>
+  </div>
+
   <!-- Header / Navigation -->
   <header class="navbar">
     <div class="container nav-content">
       <div class="logo">
-        <span class="logo-icon">🚗</span>
+        <span class="logo-icon">🛣️</span>
         <div class="logo-text">
           <span class="brand-title">珠海出发自驾指南</span>
-          <span class="brand-subtitle">Zhuhai Road Trip Planner</span>
+          <span class="brand-subtitle">Zhuhai Self-Driving Hub</span>
         </div>
       </div>
       <nav class="nav-links">
         <a href="#routes" class="nav-link active">精选路线</a>
         <a href="#calculator" class="nav-link">预算计算器</a>
         <a href="#checklist" class="nav-link">出行清单</a>
-        <a href="#guide" class="nav-link">避坑指南</a>
+        <a href="#guide" class="nav-link">离珠指南</a>
       </nav>
+      <a href="https://github.com/leon7786/20260814-huanghuiling-web" target="_blank" class="github-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub 源码
+      </a>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg-overlay"></div>
+    <div class="hero-bg" style="background-image: url('images/hero.jpg');"></div>
+    <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <div class="badge-pill">📍 珠海市区 / 香洲 / 金湾出发</div>
+      <div class="badge-pill">📍 珠海市区 / 香洲 / 金湾 / 斗门 出发</div>
       <h1 class="hero-title">从浪漫珠海出发<br><span class="highlight-text">拥抱山海大美中国</span></h1>
-      <p class="hero-desc">严选 5 条最震撼的跨省与省内自驾游线路，从海岸沙滩到喀斯特山水，从潮汕饕餮到史诗进藏。</p>
+      <p class="hero-desc">严选 5 条最震撼的跨省与省内自驾游线路。从南海海岸到喀斯特山水，从潮汕美食到史诗级滇藏雪山，包含全程里程、每日行程、美食推荐与费用预估。</p>
       
-      <!-- Quick Stats -->
+      <!-- Quick Stats Counter -->
       <div class="hero-stats">
         <div class="stat-card">
           <span class="stat-num">5</span>
-          <span class="stat-label">顶级路线</span>
+          <span class="stat-label">精选线路</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-card">
-          <span class="stat-num">1,000 ~ 3,800</span>
+          <span class="stat-num">1,000 - 3,800</span>
           <span class="stat-label">全程公里数 (km)</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-card">
-          <span class="stat-num">4 ~ 16</span>
-          <span class="stat-label">规划天数 (Days)</span>
+          <span class="stat-num">4 - 16</span>
+          <span class="stat-label">建议天数 (Days)</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Route Filter & Cards Section -->
+  <!-- Route Search & Filter Section -->
   <section id="routes" class="section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">TOP 5 精选自驾路线</h2>
-        <p class="section-subtitle">点击路线卡片查看每日行程、美食推荐、路况分析与预算</p>
+        <h2 class="section-title">🗺️ TOP 5 精选自驾路线全集</h2>
+        <p class="section-subtitle">点击路线卡片可展开每日明细、必吃美食、天气季节建议与在线打印/导出</p>
       </div>
 
-      <!-- Filters -->
-      <div class="filter-bar">
-        <div class="filter-group">
-          <span class="filter-label">筛选天数：</span>
-          <button class="filter-btn active" data-filter="duration" data-value="all">全部</button>
-          <button class="filter-btn" data-filter="duration" data-value="short">4-6天</button>
-          <button class="filter-btn" data-filter="duration" data-value="medium">7-9天</button>
-          <button class="filter-btn" data-filter="duration" data-value="long">10天以上</button>
+      <!-- Controls & Search -->
+      <div class="control-panel">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="搜索目的地、景点或美食（如：三亚、潮州、螺蛳粉、日照金山）...">
         </div>
-        <div class="filter-group">
-          <span class="filter-label">路线主题：</span>
-          <button class="filter-btn active" data-filter="theme" data-value="all">全部主题</button>
-          <button class="filter-btn" data-filter="theme" data-value="coastal">滨海沙滩</button>
-          <button class="filter-btn" data-filter="theme" data-value="food">潮汕美食</button>
-          <button class="filter-btn" data-filter="theme" data-value="karst">喀斯特山水</button>
-          <button class="filter-btn" data-filter="theme" data-value="epic">史诗高原</button>
+
+        <div class="filter-bar">
+          <div class="filter-group">
+            <span class="filter-label">行程天数：</span>
+            <button class="filter-btn active" data-filter="duration" data-value="all">全部天数</button>
+            <button class="filter-btn" data-filter="duration" data-value="short">4 - 6 天</button>
+            <button class="filter-btn" data-filter="duration" data-value="medium">7 - 9 天</button>
+            <button class="filter-btn" data-filter="duration" data-value="long">10 天以上</button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">路线主题：</span>
+            <button class="filter-btn active" data-filter="theme" data-value="all">全部主题</button>
+            <button class="filter-btn" data-filter="theme" data-value="coastal">滨海风光</button>
+            <button class="filter-btn" data-filter="theme" data-value="food">饕餮美食</button>
+            <button class="filter-btn" data-filter="theme" data-value="karst">山水民族</button>
+            <button class="filter-btn" data-filter="theme" data-value="epic">史诗进藏</button>
+          </div>
         </div>
       </div>
 
-      <!-- Route Cards Grid -->
+      <!-- Routes Cards Grid -->
       <div class="routes-grid" id="routesContainer">
-        <!-- Route cards will be rendered dynamically by JS -->
+        <!-- Rendered dynamically via app.js -->
       </div>
     </div>
   </section>
 
-  <!-- Route Detail Modal -->
+  <!-- Interactive Detail Modal -->
   <div class="modal-overlay" id="routeModal">
     <div class="modal-card">
       <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-header" id="modalHeader">
-        <!-- Dynamic header content -->
-      </div>
-      <div class="modal-body" id="modalBody">
-        <!-- Dynamic timeline & detail content -->
+      <div class="modal-header" id="modalHeader"></div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer" id="modalFooter">
+        <button class="btn-secondary" onclick="window.print()">🖨️ 打印/保存本行程</button>
+        <button class="btn-primary" onclick="closeModal()">关闭预览</button>
       </div>
     </div>
   </div>
 
-  <!-- Interactive Budget Calculator Section -->
+  <!-- Budget Calculator Section -->
   <section id="calculator" class="section alt-bg">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">💰 智能自驾预算计算器</h2>
-        <p class="section-subtitle">根据路线公里数、车型与同行人数，精准预估全套费用</p>
+        <h2 class="section-title">💰 智能自驾预算在线计算器</h2>
+        <p class="section-subtitle">基于各路线实时公里数、车辆动力类型与同行人数，精准推算费用组成</p>
       </div>
 
       <div class="calculator-card">
         <div class="calc-form">
           <div class="form-group">
-            <label>选择路线或输入公里数</label>
+            <label>选择自驾路线</label>
             <select id="calcRouteSelect" class="form-control">
-              <option value="1500" data-tolls="550" data-days="7">路线一：粤西滨海与海南岛 (约1500km, 7天)</option>
-              <option value="1200" data-tolls="600" data-days="6">路线二：粤东潮汕与闽南海航 (约1200km, 6天)</option>
-              <option value="1800" data-tolls="900" data-days="8">路线三：桂林山水与黔东南风情 (约1800km, 8天)</option>
-              <option value="1200" data-tolls="650" data-days="5">路线四：粤北峰林与湘赣丹霞 (约1200km, 5天)</option>
-              <option value="3800" data-tolls="950" data-days="14">路线五：彩云之南与史诗滇藏线 (约3800km, 14天)</option>
-              <option value="custom">自定义行程参数</option>
+              <option value="1500" data-tolls="550" data-days="7">路线一：粤西滨海与海南岛 (1500km, 7天)</option>
+              <option value="1200" data-tolls="600" data-days="6">路线二：粤东潮汕与闽南海航 (1200km, 6天)</option>
+              <option value="1800" data-tolls="900" data-days="8">路线三：桂林山水与黔东南风情 (1800km, 8天)</option>
+              <option value="1200" data-tolls="650" data-days="5">路线四：粤北峰林与湘赣丹霞 (1200km, 5天)</option>
+              <option value="3800" data-tolls="950" data-days="14">路线五：彩云之南与史诗滇藏线 (3800km, 14天)</option>
             </select>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label>动力类型</label>
+              <label>动力类型与能耗</label>
               <select id="calcEngine" class="form-control">
-                <option value="gas">燃油车 (约 8L/100km, 汽油¥8.2/L)</option>
-                <option value="ev">纯电动汽车 (约 16kWh/100km, 电费¥1.2/kWh)</option>
-                <option value="phev">插电混动 (约 4.5L/100km)</option>
+                <option value="gas">⛽ 燃油车 (约 8.0 L/100km, ¥8.2/L)</option>
+                <option value="ev">⚡ 纯电动车 (约 16 kWh/100km, ¥1.2/kWh)</option>
+                <option value="phev">🔋 插电混动 (约 4.5 L/100km, ¥8.2/L)</option>
               </select>
             </div>
             <div class="form-group">
-              <label>同行人数</label>
+              <label>同行人数 (摊薄车费与房费)</label>
               <input type="number" id="calcPeople" class="form-control" value="2" min="1" max="7">
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label>住宿标准（每间/晚）</label>
+              <label>住宿标准（间/晚）</label>
               <select id="calcHotel" class="form-control">
-                <option value="300">舒适型民宿/快捷酒店 (¥300/晚)</option>
-                <option value="550" selected>品质高分海景/古城精品 (¥550/晚)</option>
-                <option value="900">豪华品牌/野奢度假 (¥900/晚)</option>
+                <option value="300">经济舒适型 (¥300/晚)</option>
+                <option value="550" selected>品质海景/古城高分 (¥550/晚)</option>
+                <option value="900">豪华品牌/野奢观景 (¥900/晚)</option>
               </select>
             </div>
             <div class="form-group">
-              <label>餐饮标准（每人/天）</label>
+              <label>餐饮标准（人/天）</label>
               <select id="calcFood" class="form-control">
-                <option value="120">平价小吃大排档 (¥120/人/天)</option>
-                <option value="220" selected>地道特色菜与海鲜盛宴 (¥220/人/天)</option>
+                <option value="120">地道平价小吃 (¥120/人/天)</option>
+                <option value="220" selected>海鲜盛宴与特色菜 (¥220/人/天)</option>
                 <option value="380">高端精致饕餮 (¥380/人/天)</option>
               </select>
             </div>
@@ -163,62 +185,103 @@
         </div>
 
         <div class="calc-result">
-          <h3 class="result-title">预算汇总估算</h3>
+          <h3 class="result-title">📊 费用预算汇总</h3>
           <div class="result-total">
-            <span class="total-label">单车总花费预估</span>
+            <span class="total-label">单车全程预估总费用</span>
             <span class="total-amount" id="totalAmount">¥ 6,850</span>
           </div>
           <div class="result-per-person">
-            人均花费（按 <span id="peopleCountText">2</span> 人）：<strong id="perPersonAmount">¥ 3,425</strong>
+            👥 人均消费估算（<span id="peopleCountText">2</span> 人分摊）：<strong id="perPersonAmount">¥ 3,425</strong>
           </div>
+          
+          <!-- Visual Bar -->
+          <div class="budget-bar-container">
+            <div class="budget-bar-item fuel" id="barFuel" style="width: 20%;"></div>
+            <div class="budget-bar-item tolls" id="barTolls" style="width: 15%;"></div>
+            <div class="budget-bar-item hotel" id="barHotel" style="width: 35%;"></div>
+            <div class="budget-bar-item food" id="barFood" style="width: 30%;"></div>
+          </div>
+
           <div class="result-breakdown">
-            <div class="bd-item"><span>燃油 / 充电费：</span><strong id="bdFuel">¥ 984</strong></div>
-            <div class="bd-item"><span>高速过路费：</span><strong id="bdTolls">¥ 550</strong></div>
-            <div class="bd-item"><span>住宿费用：</span><strong id="bdHotel">¥ 3,300</strong></div>
-            <div class="bd-item"><span>餐饮费用：</span><strong id="bdFood">¥ 3,080</strong></div>
+            <div class="bd-item"><span class="dot fuel"></span> 燃油 / 充电费：<strong id="bdFuel">¥ 984</strong></div>
+            <div class="bd-item"><span class="dot tolls"></span> 高速过路费：<strong id="bdTolls">¥ 550</strong></div>
+            <div class="bd-item"><span class="dot hotel"></span> 住宿费用：<strong id="bdHotel">¥ 3,300</strong></div>
+            <div class="bd-item"><span class="dot food"></span> 餐饮费用：<strong id="bdFood">¥ 3,080</strong></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Checklist Section -->
+  <!-- Pre-departure Checklist Section -->
   <section id="checklist" class="section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">📋 珠海自驾出行打包清单</h2>
-        <p class="section-subtitle">出发前逐项核对，确保长途自驾万无一失</p>
+        <h2 class="section-title">📋 珠海出发自驾打包 CheckList</h2>
+        <p class="section-subtitle">勾选完成的准备事项，进度会自动保存在本地浏览器中</p>
       </div>
 
       <div class="checklist-grid">
         <div class="checklist-card">
-          <div class="cl-header">🪪 必备证件与车辆备选</div>
+          <div class="cl-header">🪪 证件与电子手续</div>
           <ul class="cl-list">
-            <li><input type="checkbox" id="c1"> <label for="c1">身份证 / 驾驶证 / 行驶证</label></li>
-            <li><input type="checkbox" id="c2"> <label for="c2">车辆电子保险单及救援电话</label></li>
-            <li><input type="checkbox" id="c3"> <label for="c3">港澳居民来往内地通行证（若适用）</label></li>
-            <li><input type="checkbox" id="c4"> <label for="c4">ETC 设备确认余额与绑定扣款卡</label></li>
+            <li><input type="checkbox" class="chk-item" id="c1"> <label for="c1">驾驶证、行驶证、身份证正本</label></li>
+            <li><input type="checkbox" class="chk-item" id="c2"> <label for="c2">电子保单 & 24小时免费道路救援热线</label></li>
+            <li><input type="checkbox" class="chk-item" id="c3"> <label for="c3">ETC 充值确认或绑定信用卡状态</label></li>
+            <li><input type="checkbox" class="chk-item" id="c4"> <label for="c4">徐闻港过海轮渡提前微信预约购票</label></li>
           </ul>
         </div>
 
         <div class="checklist-card">
-          <div class="cl-header">🔧 随车安全应急装备</div>
+          <div class="cl-header">🔧 车况检查与安全随车件</div>
           <ul class="cl-list">
-            <li><input type="checkbox" id="c5"> <label for="c5">三角警示牌与反光背心</label></li>
-            <li><input type="checkbox" id="c6"> <label for="c6">便携车载充气泵 & 胎压检测仪</label></li>
-            <li><input type="checkbox" id="c7"> <label for="c7">搭火线 / 车载应急启动电源</label></li>
-            <li><input type="checkbox" id="c8"> <label for="c8">随车灭火器与多功能救援锤</label></li>
+            <li><input type="checkbox" class="chk-item" id="c5"> <label for="c5">四轮胎压测定 (建议 2.3 - 2.5 bar)</label></li>
+            <li><input type="checkbox" class="chk-item" id="c6"> <label for="c6">三角警示牌、反光背心、灭火器</label></li>
+            <li><input type="checkbox" class="chk-item" id="c7"> <label for="c7">便携车载充气泵与应急搭火线</label></li>
+            <li><input type="checkbox" class="chk-item" id="c8"> <label for="c8">玻璃水加满 (去高海拔需防冻玻璃水)</label></li>
           </ul>
         </div>
 
         <div class="checklist-card">
-          <div class="cl-header">🏔️ 高海拔/进藏专属备件</div>
+          <div class="cl-header">⛰️ 高原 / 长途专属装备</div>
           <ul class="cl-list">
-            <li><input type="checkbox" id="c9"> <label for="c9">便携式医用氧气瓶（2-4罐）</label></li>
-            <li><input type="checkbox" id="c10"> <label for="c10">高原安 / 乙酰唑胺 / 应急退烧药</label></li>
-            <li><input type="checkbox" id="c11"> <label for="c11">防滑链（秋冬冰雪路段必备）</label></li>
-            <li><input type="checkbox" id="c12"> <label for="c12">高倍防晒霜 (SPF50+) & 太阳镜</label></li>
+            <li><input type="checkbox" class="chk-item" id="c9"> <label for="c9">医用便携式氧气瓶 (高反应急备用)</label></li>
+            <li><input type="checkbox" class="chk-item" id="c10"> <label for="c10">高反预防药 (高原安/红景天/布洛芬)</label></li>
+            <li><input type="checkbox" class="chk-item" id="c11"> <label for="c11">偏光太阳镜 & 高倍防晒霜 (SPF50+)</label></li>
+            <li><input type="checkbox" class="chk-item" id="c12"> <label for="c12">轮胎防滑链 (秋冬进入滇藏线必备)</label></li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zhuhai Departure Guide Section -->
+  <section id="guide" class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🚦 离珠干线与避坑实用指南</h2>
+        <p class="section-subtitle">高效对接大湾区高速公路网，避开节假日拥堵节点</p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="guide-icon">🛣️</div>
+          <h3>珠海三大离珠干线</h3>
+          <p><strong>西部方向</strong>：西部沿海高速 (S32) 直达江门、阳江、湛江；<br>
+             <strong>东部方向</strong>：经深中通道/港珠澳大桥连接线快达深圳、惠州；<br>
+             <strong>北部方向</strong>：广珠西线高速 (S43) 直接接入广昆与京港澳高速。</p>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-icon">⛴️</div>
+          <h3>徐闻港过海要领</h3>
+          <p>自驾去海南需在徐闻港搭乘滚装轮渡。必须提前在“徐闻港”微信公众号预约车票，避开春运及国庆小长假当日轮渡滞留峰值。</p>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-icon">🏔️</div>
+          <h3>阶梯适应高反</h3>
+          <p>从珠海海平面出发直飞高原极易高反。自驾路线五经由昆明(1900m)➔大理(2000m)➔丽江(2400m)➔香格里拉(3300m)海拔阶梯上升，是全中国最科学适应高反路线。</p>
         </div>
       </div>
     </div>
@@ -227,8 +290,8 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <p>© 2026 珠海出发自驾攻略指南 · GitHub 仓库：<code>20260814-huanghuiling-web</code></p>
-      <p class="footer-sub">用心规划每一程，探索华夏壮美山河</p>
+      <p>© 2026 珠海出发 TOP 5 自驾游攻略指南 · GitHub Pages 版权所有</p>
+      <p class="footer-sub">项目开源地址：<a href="https://github.com/leon7786/20260814-huanghuiling-web" target="_blank">github.com/leon7786/20260814-huanghuiling-web</a></p>
     </div>
   </footer>
 
