@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>精神修行与心灵探索 · 印度古典哲学七层境界与实践指南</title>
+  <meta name="description" content="基于印度古典八支瑜伽（Ashtanga Yoga）与吠檀多哲学（Vedanta）的精神修行指南：由浅入深系统剖析七层境界、能到达的心灵状态与具体实现练习方式。">
+  <meta name="keywords" content="精神修行, 瑜伽八支, 冥想实修, 三昧, 调息法, 正念内观, 吠檀多不二论, 梵我合一">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Spiritual Specific Styles */
+    .spiritual-badge {
+      background: var(--accent-purple-bg);
+      color: var(--accent-purple);
+      border: 1px solid rgba(124, 58, 237, 0.2);
+    }
+    
+    .stage-number-badge {
+      background: linear-gradient(135deg, #7c3aed 0%, #0284c7 100%);
+      color: #ffffff;
+      font-weight: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+    }
+
+    .realm-box {
+      background: var(--accent-amber-bg);
+      border-left: 4px solid var(--accent-amber);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 16px 0;
+    }
+
+    .practice-box {
+      background: var(--accent-emerald-bg);
+      border-left: 4px solid var(--accent-emerald);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 16px 0;
+    }
+
+    .method-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .method-list li {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .method-list li strong {
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .ladder-nav {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .ladder-step {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ladder-step:hover, .ladder-step.active {
+      border-color: var(--accent-purple);
+      background: #faf5ff;
+      transform: translateX(6px);
+    }
+
+    .ladder-title {
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--text-main);
+    }
+
+    .ladder-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Breath Timer Widget */
+    .timer-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      margin-top: 40px;
+    }
+
+    .breath-circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e0f2fe 0%, #f5f3ff 100%);
+      border: 4px solid var(--primary);
+      margin: 24px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+      transition: all 4s ease-in-out;
+    }
+
+    .breath-circle.inhale {
+      transform: scale(1.3);
+      border-color: var(--accent-purple);
+      color: var(--accent-purple);
+    }
+
+    .breath-circle.exhale {
+      transform: scale(0.95);
+      border-color: var(--accent-emerald);
+      color: var(--accent-emerald);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <span>🧘 精神修行专题 · 基于印度八支瑜伽（Ashtanga Yoga）与吠檀多哲学由浅入深七层境界</span>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <span class="logo-icon">🧘‍♂️</span>
+        <div class="logo-text">
+          <span class="brand-title">精神修行与心灵探索</span>
+          <span class="brand-subtitle">Spiritual Journey & Awakening</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">🚗 珠海自驾</a>
+        <a href="beijing-5days.html" class="nav-link">🏯 北京5日游</a>
+        <a href="#ladder" class="nav-link active">七层境界梯阶</a>
+        <a href="#practice" class="nav-link">实修调息</a>
+        <a href="#science" class="nav-link">脑波与心理学</a>
+      </nav>
+      <a href="https://github.com/leon7786/20260814-huanghuiling-web" target="_blank" class="github-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub 源码
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('images/hero.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="badge-pill spiritual-badge">☸️ 印度古典瑜伽哲学 · 意识升华实修指南</div>
+      <h1 class="hero-title">精神修行的七层境界<br><span class="highlight-text">由浅入深的觉醒之路</span></h1>
+      <p class="hero-desc">源自印度帕坦伽利《瑜伽经》八支瑜伽（Ashtanga Yoga）与吠檀多不二论（Advaita Vedanta）。系统剖析身心基石、调息内观、禅定三昧至终极梵我合一的达成方式。</p>
+      
+      <!-- Quick Stats Counter -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-num" style="color: var(--accent-purple);">7</span>
+          <span class="stat-label">层次境界</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-num" style="color: var(--primary);">8 支</span>
+          <span class="stat-label">古典实修步骤</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-num" style="color: var(--accent-emerald);">100%</span>
+          <span class="stat-label">境界与方法映射</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 7 Stages Hierarchy Section -->
+  <section id="ladder" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">☸️ 精神修行七层阶梯架构</h2>
+        <p class="section-subtitle">点击各阶梯卡片，快速定位到该层境界的能到达状态与具体实现练习</p>
+      </div>
+
+      <!-- Interactive Ladder Navigation -->
+      <div class="ladder-nav" id="ladderNav">
+        <!-- Rendered dynamically via js/spiritual.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Stages Cards Section -->
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">📖 七层境界与实现方式全解析</h2>
+        <p class="section-subtitle">从身体习惯到意识觉醒，清晰拆解每一步的操作路径</p>
+      </div>
+
+      <div class="routes-grid" id="stagesContainer" style="grid-template-columns: 1fr;">
+        <!-- Rendered dynamically via js/spiritual.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Meditation & Pranayama Breath Section -->
+  <section id="practice" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🧘‍♂️ 线上正念调息实修体验</h2>
+        <p class="section-subtitle">练习第二阶【交替深呼吸调息法 (Pranayama)】，平抚副交感神经</p>
+      </div>
+
+      <div class="timer-card">
+        <h3>4-4-6 深度调息循环助手</h3>
+        <p style="color: var(--text-muted); font-size: 14px; margin-top: 6px;">跟随圆环律动：吸气 4 秒 ➔ 屏息 4 秒 ➔ 呼气 6 秒</p>
+        
+        <div class="breath-circle" id="breathCircle">准备开始</div>
+        <div id="breathStatus" style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 20px;">点击下方按钮启动体验</div>
+        
+        <button class="btn-primary" id="startBreathBtn" style="padding: 12px 32px; font-size: 15px;">▶️ 启动调息练习</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Neuroscience & Psychology Section -->
+  <section id="science" class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🧠 现代脑科学与心理学视角</h2>
+        <p class="section-subtitle">东方精神修行与西方科学研究的奇妙契合</p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="guide-icon">🌊</div>
+          <h3>脑波频率改变 (Brainwaves)</h3>
+          <p>从日常急躁的 <strong>Beta 波 (14-30Hz)</strong> 降至深度平静的 <strong>Alpha 波 (8-13Hz)</strong>，进入三昧（Samadhi）状态时大脑出现高度同步的 <strong>Gamma 波 (30-100Hz)</strong>，认知敏锐度与喜乐感显著上升。</p>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-icon">🎯</div>
+          <h3>心流状态 (Flow State)</h3>
+          <p>第五阶禅定（Dhyana）与心理学家米哈里·契克森米哈赖提倡的“心流”高度重合。杂念与时间感消失，主体与客体融为一体，产生源源不断的内生幸福感。</p>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-icon">🛡️</div>
+          <h3>MBSR 正念减压疗法</h3>
+          <p>现代临床心理学 MBSR 疗法完全提炼自第一至四阶（持戒、调息与感官收摄）。能显著降低大脑杏仁核（焦虑中枢）的过敏反应，重塑前额叶皮层黑质。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 精神修行与心灵探索指南 · 印度古典瑜伽哲学全集</p>
+      <p class="footer-sub">返回 <a href="index.html">🚗 珠海自驾首页</a> | <a href="beijing-5days.html">🏯 北京5日游专题</a> | 开源地址：<a href="https://github.com/leon7786/20260814-huanghuiling-web" target="_blank">github.com/leon7786/20260814-huanghuiling-web</a></p>
+    </div>
+  </footer>
+
+  <script src="js/spiritual.js"></script>
+</body>
+</html>
