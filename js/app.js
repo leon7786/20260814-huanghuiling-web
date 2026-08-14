@@ -1,5 +1,30 @@
-// TOP 6 Zhuhai Departure Self-Driving Routes Data
+// TOP 7 Zhuhai Departure Self-Driving Routes Data
 const routesData = [
+  {
+    id: 7,
+    title: "路线七：华南华中纯自然奇观秘境大环线",
+    subtitle: "雾漫小东江 · 张家界奇峰 · 梵净山天空之城 · 荔波水上森林 · 黄果树大瀑布",
+    duration: "medium",
+    durationText: "8 - 10 天",
+    theme: "nature",
+    themeText: "纯自然奇观",
+    seasonText: "4月 - 10月",
+    distance: 2500,
+    tolls: 1350,
+    stops: "珠海 ➔ 郴州小东江 ➔ 张家界天门山/武陵源 ➔ 铜仁梵净山 ➔ 荔波小七孔 ➔ 黄果树瀑布 ➔ 桂林 ➔ 珠海",
+    highlights: ["【水上仙境】雾漫小东江", "【潘多拉星球】张家界奇峰", "【天空之城】梵净山金顶", "【地球绿宝石】小七孔碧潭", "【黄果树大瀑布】水帘洞"],
+    budgetPerPerson: "4,200 - 6,750",
+    itinerary: [
+      { day: "Day 1", title: "珠海 ➔ 郴州东江湖（白廊水乡）", distance: "460 km / 5.5h", desc: "自驾白廊景区环湖公路，观赏湖光山色与夕阳晚霞。", food: "东江湖游水三文鱼、郴州杀猪粉" },
+      { day: "Day 2", title: "晨观【雾漫小东江】 ➔ 张家界天门山", distance: "380 km / 4.5h", desc: "清晨06:00看雾漫小东江渔夫撒网水墨画卷，午后驶达张家界游览天门山玻璃栈道与天门洞。", food: "张家界三下锅、葛根粉" },
+      { day: "Day 3", title: "张家界武陵源国家森林公园", distance: "全天自然徒步", desc: "乘坐百龙天梯，游览袁家界《阿凡达》哈利路亚山原型【乾坤柱】、天子山与金鞭溪森林小溪。", food: "岩耳炖土鸡、土家腊肉" },
+      { day: "Day 4", title: "张家界 ➔ 梵净山自然保护区", distance: "260 km / 3.5h", desc: "驶入贵州铜仁梵净山，攀登险峻【红云金顶】与打卡亿年风化奇观【蘑菇石】。", food: "铜仁社饭、梵净山小炒肉" },
+      { day: "Day 5", title: "梵净山 ➔ 舞阳河水上峡谷 ➔ 荔波", distance: "320 km / 4h", desc: "乘船游览舞阳河国家级风景区S型水上峡谷，下午驶往荔波。", food: "酸汤鱼、荔波割草鸭" },
+      { day: "Day 6", title: "荔波小七孔（地球绿宝石全天吸氧）", distance: "景区内观光车", desc: "游览小七孔古桥、拉雅瀑布、68级跌水瀑布、徒步水上森林与卧龙潭翡翠绿水。", food: "荔波豆花烤鱼、杨梅汤" },
+      { day: "Day 7", title: "荔波 ➔ 黄果树大瀑布 ➔ 陡坡塘瀑布", distance: "230 km / 2.5h", desc: "游览亚洲第一大瀑布【黄果树瀑布】，穿越水帘洞，打卡《西游记》片尾曲【陡坡塘瀑布】。", food: "安顺夺夺粉火锅、黄果树土鸡" },
+      { day: "Day 8-9", title: "黄果树 ➔ 阳朔遇龙河竹筏水乡 ➔ 珠海", distance: "900 km / 分段", desc: "在阳朔体验遇龙河人工竹筏漂流，看两岸喀斯特青峰与绿水倒影，随后走广珠西线高速回珠海。", food: "阳朔啤酒鱼、桂林米粉" }
+    ]
+  },
   {
     id: 1,
     title: "路线一：粤西滨海与海南岛风情自驾线",
@@ -29,8 +54,8 @@ const routesData = [
     subtitle: "双月湾海龟湾 · 汕尾风车岛 · 潮汕牛肉火锅 · 南澳跨海大桥 · 漳州火山岛",
     duration: "short",
     durationText: "5 - 7 天",
-    theme: "food",
-    themeText: "饕餮美食",
+    theme: "coastal",
+    themeText: "滨海风光",
     seasonText: "全年皆宜",
     distance: 1200,
     tolls: 600,
@@ -75,8 +100,8 @@ const routesData = [
     subtitle: "英西峰林 · 连州地下河 · 丹霞山日出 · 郴州高椅岭 · 东江湖雾漫 · 赣州客家围屋",
     duration: "short",
     durationText: "4 - 6 天",
-    theme: "karst",
-    themeText: "山水民族",
+    theme: "nature",
+    themeText: "纯自然奇观",
     seasonText: "3月 - 11月",
     distance: 1200,
     tolls: 650,
@@ -200,7 +225,10 @@ function initFiltersAndSearch() {
 
   function applyFilters() {
     const filtered = routesData.filter(r => {
-      const matchDuration = currentDuration === "all" || r.duration === currentDuration;
+      const matchDuration = currentDuration === "all" || 
+        r.duration === currentDuration ||
+        (currentDuration === "medium" && (r.duration === "medium" || r.duration === "short"));
+      
       const matchTheme = currentTheme === "all" || r.theme === currentTheme;
       const matchSearch = !searchText || 
         r.title.includes(searchText) || 
