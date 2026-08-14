@@ -1,83 +1,83 @@
-// Beijing 5-Day Nature & Authentic Heritage Routes Dataset
+// Beijing 5-Day High-Upvote & Local Endorsed Routes Dataset
 const beijingRoutesData = [
   {
     id: 1,
-    theme: "wild",
-    themeText: "🏔️ 奇山野长城",
-    title: "路线一：京郊奇山秀水与野长城自然风光 5日游",
-    subtitle: "司马台野长城 · 延庆百里山水画廊 · 玉渡山 · 野鸭湖湿地 · 香山樱桃沟",
-    highlights: ["【明代原貌】司马台长城险峰落日", "【最美公路】百里山水画廊自驾", "【北京小瑞士】玉渡山高山草甸", "【鸟类天堂】野鸭湖国家湿地", "【水杉森林】国家植物园樱桃沟"],
+    theme: "classic",
+    themeText: "🔥 知乎万赞爆款",
+    title: "路线一：【知乎万赞爆款】帝都皇城中轴经典 5天4晚",
+    subtitle: "天安门广场 · 故宫博物院 · 景山落日俯瞰紫禁城 · 八达岭/慕田峪长城 · 颐和园 · 圆明园 · 天坛 · 什刹海",
+    highlights: ["【知乎10W+赞】首次访京路线", "【皇家中轴】故宫紫禁城全景", "【景山万春亭】紫禁城落日大片", "【长城雄关】八达岭/慕田峪长城", "【饕餮美食】四季民福烤鸭 & 聚宝源"],
     budgetPerPerson: "1,800 - 3,200",
     itinerary: [
-      { day: "Day 1", title: "北京市区 ➔ 密云【司马台长城】看落日星空", distance: "130 km / 2h", desc: "驾车前往密云区，攀登保留明代原貌的司马台长城，登望京楼看陡峭长城与群山连绵落日。", food: "密云水库豆腐宴、柴鸡炖蘑菇" },
-      { day: "Day 2", title: "密云 ➔ 延庆【百里山水画廊】自驾公路 ➔ 硅化木公园", distance: "110 km / 2.5h", desc: "行驶在百里山水画廊，途经滴水壶瀑布与黑白河，游览侏罗纪时代硅化木国家地质公园。", food: "延庆柳沟火盆锅米粮黄糕" },
-      { day: "Day 3", title: "延庆【玉渡山自然风景区】➔ 野鸭湖湿地公园", distance: "50 km / 1h", desc: "漫步玉渡山高山草甸、忘忧湖与忘忧溪流，下午前往野鸭湖国家湿地公园看万亩芦苇荡与水鸟。", food: "延庆全鱼宴、野鸭湖农家菜" },
-      { day: "Day 4", title: "延庆 ➔ 香山公园 ➔ 国家植物园樱桃沟", distance: "90 km / 1.5h", desc: "登上香山香炉峰俯瞰西山山脉，游览国家植物园深入樱桃沟水杉森林木栈道。", food: "西山春饼、老北京铜锅涮肉" },
-      { day: "Day 5", title: "西山国家森林公园（鬼笑石俯瞰北京）➔ 返程", distance: "市区散步", desc: "游览西山国家森林公园，登上鬼笑石俯瞰北京城区全景，随后前往机场/高铁站返程。", food: "宫廷豌豆黄、烤鸭" }
+      { day: "Day 1", title: "初识京城 · 天安门 ➔ 故宫博物院 ➔ 景山公园看紫禁城落日", distance: "市区步行/地铁", desc: "游天安门广场与毛主席纪念堂；深入故宫博物院三大殿与御花园；登景山万春亭360度俯瞰紫禁城金碧辉煌落日。", food: "四季民福烤鸭、老北京炸酱面" },
+      { day: "Day 2", title: "雄关壮丽 · 八达岭/慕田峪长城 ➔ 奥林匹克公园双辉夜景", distance: "高铁/专线 45m", desc: "搭高铁20分钟直达长城打卡好汉坡；下午返回市区游奥林匹克公园看鸟巢水立方美轮美奂夜景。", food: "聚宝源铜锅涮肉、簋街麻辣小龙虾" },
+      { day: "Day 3", title: "皇家水乡 · 颐和园 ➔ 圆明园 ➔ 清华/北大校门打卡", distance: "地铁4号线", desc: "游颐和园东宫门进北宫门出看佛香阁与昆明湖十七孔桥；游圆明园福海湖畔与大水法遗址；清华北大正门合影。", food: "老北京烤鸭、中关村美食" },
+      { day: "Day 4", title: "古树盛境 · 天坛公园 ➔ 恭王府 ➔ 什刹海胡同水系", distance: "地铁2号线/8号线", desc: "游天坛祈年殿与百年古柏森林；游恭王府打卡康熙御笔福字碑；漫步什刹海烟袋斜街看银锭观山落日。", food: "烤肉季芝麻酱烧饼、护国寺小吃" },
+      { day: "Day 5", title: "文化大满贯 · 中国国家博物馆 ➔ 前门大栅栏 ➔ 返程", distance: "市区散步", desc: "朝圣中国国家博物馆观赏古代中国国宝展；逛前门大栅栏鲜鱼口小吃街，随后前往机场/高铁站返程。", food: "爆肚冯、豆汁儿焦圈" }
     ]
   },
   {
     id: 2,
-    theme: "imperial",
-    themeText: "👑 皇家园林水系",
-    title: "路线二：皇家园林与自然山水人文深游 5日游",
-    subtitle: "颐和园昆明湖 · 圆明园遗址 · 故宫景山中轴全景 · 天坛古树群 · 什刹海水系",
-    highlights: ["【园林巅峰】颐和园昆明湖与十七孔桥", "【遗址水域】圆明园福海湖畔", "【中轴俯瞰】景山万春亭俯瞰紫禁城", "【百年古柏】天坛森林氧吧公园", "【自然水系】什刹海银锭观山"],
-    budgetPerPerson: "1,600 - 2,900",
+    theme: "trending",
+    themeText: "📸 小红书爆款潮玩",
+    title: "路线二：【小红书爆款潮玩】环球影城与网红地标 5天4晚",
+    subtitle: "北京环球度假区全天 · 798艺术区 · 三里屯太古里 · 故宫清装写真 · 鼓楼红墙 · 什刹海摇橹船",
+    highlights: ["【小红书5W+收藏】潮人出片推荐", "【魔法世界】环球影城哈利波特落日飞车", "【清装写真】故宫红墙飞檐汉服大片", "【潮流前线】798艺术区与三里屯太古里", "【民谣水乡】什刹海古风摇橹船"],
+    budgetPerPerson: "2,100 - 3,800",
     itinerary: [
-      { day: "Day 1", title: "皇家山水理水巅峰 · 颐和园 ➔ 圆明园遗址", distance: "市区轨道/打车", desc: "游览世界文化遗产颐和园，漫步昆明湖与西堤六桥；下午游览圆明园福海湖畔与西洋楼遗址。", food: "老北京烤鸭、宫廷糕点" },
-      { day: "Day 2", title: "古都中轴与山水俯瞰 · 故宫博物院 ➔ 景山公园", distance: "市区步行", desc: "游览故宫博物院紫禁城三大殿与御花园；下午登景山万春亭360度俯瞰紫禁城全景与北海水系。", food: "老北京铜锅涮肉、炙子烤肉" },
-      { day: "Day 3", title: "古树群与祈天圣地 · 天坛公园 ➔ 陶然亭", distance: "市区轨道", desc: "游览天坛祈年殿与皇穹宇，漫步数千株百年古柏树林；下午游览陶然亭公园水系与名亭群。", food: "南门涮肉、爆肚冯" },
-      { day: "Day 4", title: "皇家水上长廊 · 北海公园 ➔ 什刹海水系", distance: "市区步行", desc: "游览北海公园白塔与琼华岛；漫步什刹海前海、后海、西海水系，打卡银锭观山看西山余脉。", food: "烤肉季芝麻酱烧饼、护国寺小吃" },
-      { day: "Day 5", title: "中山公园古柏林与社稷坛 ➔ 顺利返程", distance: "市区散步", desc: "游览中山公园社稷坛五色土与古柏林，沿着护城河水系散步后前往车站/机场返程。", food: "老北京炸酱面" }
+      { day: "Day 1", title: "潮流首站 · 798艺术区 ➔ 三里屯太古里夜生活", distance: "打车/地铁", desc: "游798艺术区打卡LOFT工业风包豪斯建筑与涂鸦墙；晚上逛三里屯太古里体验潮流街拍与时尚酒吧。", food: "三里屯网红西餐、泰餐" },
+      { day: "Day 2", title: "沉浸式狂欢 · 北京环球度假区全天畅玩", distance: "地铁7号线/1号线", desc: "全天畅玩环球影城：哈利波特禁忌之旅、霸天虎过山车、小黄人乐园，傍晚拍摄城堡落日飞车与灯光秀。", food: "哈利波特黄油啤酒、侏罗纪餐厅" },
+      { day: "Day 3", title: "古风写真 · 故宫清装大片 ➔ 景山落日 ➔ 王府井", distance: "市区步行", desc: "前往故宫拍摄清装/汉服宫廷写真大片；登景山看紫禁城全景；拍角楼倒影，晚上逛王府井大街。", food: "局气京味菜、王府井喜茶" },
+      { day: "Day 4", title: "网红打卡 · 鼓楼红墙 ➔ 什刹海摇橹船 ➔ 恭王府", distance: "骑行/步行", desc: "打卡鼓楼红墙（《赵雷-鼓楼》同款地标）；在什刹海乘坐古风摇橹船；游恭王府花园沾福气。", food: "后海民谣酒吧餐、烤肉季" },
+      { day: "Day 5", title: "颐和园画中游 ➔ 前门鲜鱼口 ➔ 返程", distance: "地铁4号线", desc: "游览颐和园打卡画中游建筑群；前往前门大栅栏品尝局气/四季民福烤鸭后返程。", food: "老北京炸酱面、驴打滚" }
     ]
   },
   {
     id: 3,
-    theme: "meadow",
-    themeText: "🌿 峡谷高山草甸",
-    title: "路线三：太行京西峡谷与高山草甸生态探秘 5日游",
-    subtitle: "门头沟百花山高山草甸 · 爨底下明清古村 · 石花洞地下溶洞 · 十渡拒马河峡谷",
-    highlights: ["【华北植物宝库】百花山高山草甸", "【太行深山】爨底下明清四合院古村", "【地下奇观】石花洞7层大溶洞", "【喀斯特峡谷】十渡拒马河竹筏漂流", "【京西小武当】圣莲山奇峰"],
-    budgetPerPerson: "1,750 - 3,100",
+    theme: "foodie",
+    themeText: "🥢 北京本地人私藏",
+    title: "路线三：【老北京人私藏】胡同烟火与牛街美食 5天4晚",
+    subtitle: "牛街清真美食 · 雍和宫祈福 · 国子监700年古柏 · 五道营胡同 · 智化寺明代古乐 · 北海荡双桨",
+    highlights: ["【本地人极力推荐】避开大团拥挤", "【饕餮牛街】聚宝源/白记年糕/奶酪魏", "【明代活化石】智化寺二十八代宫廷古乐", "【文艺胡同】五道营胡同独立咖啡馆", "【古柏森林】国子监700年儒家学府"],
+    budgetPerPerson: "1,550 - 2,800",
     itinerary: [
-      { day: "Day 1", title: "北京市区 ➔ 门头沟【爨底下明清古村】", distance: "90 km / 2h", desc: "前往门头沟太行山余脉游览爨底下古村，登观景台俯瞰依山而建的明清四合院金元宝格局。", food: "爨底下压饸饹面、炸槐花" },
-      { day: "Day 2", title: "门头沟【百花山高山草甸自然保护区】", distance: "50 km / 1h", desc: "全天游览海拔2000米的百花山，徒步木栈道穿越高山云海与千亩野花高山草甸避暑。", food: "高山烤全羊、柴鸡蛋" },
-      { day: "Day 3", title: "门头沟 ➔ 房山【石花洞地下大溶洞】", distance: "70 km / 1.5h", desc: "游览石花洞国家地质公园地下7层溶洞，观赏天然形成的石花、石柱、石竹与地下暗河。", food: "房山饸饹面、磨盘柿干" },
-      { day: "Day 4", title: "房山【十渡国家地质公园】➔ 拒马河峡谷", distance: "60 km / 1.2h", desc: "游览十渡北方喀斯特峰林峡谷，沿着拒马河峡谷自驾，体验清凉峡谷竹筏漂流。", food: "十渡拒马河虹鳟鱼、烤山羊腿" },
-      { day: "Day 5", title: "圣莲山风景区 ➔ 返程", distance: "80 km / 1.5h", desc: "游览高耸入云的圣莲山峰林与天然莲花山谷地貌，下午返程。", food: "京味小吃" }
+      { day: "Day 1", title: "胡同老街 · 东交民巷 ➔ 前门大栅栏 ➔ 中山公园", distance: "市区步行", desc: "漫步北京最长洋楼老街东交民巷；游中山公园社稷坛五色土与古柏林；晚上吃南门涮肉鲜切羊肉。", food: "南门涮肉、秘制麻酱" },
+      { day: "Day 2", title: "古刹祈福与学府古树 · 雍和宫 ➔ 国子监 ➔ 五道营胡同", distance: "地铁2号线/5号线", desc: "朝圣雍和宫领免费香祈福看18米整木白檀大佛；游国子监看700年古柏；漫步五道营胡同文艺小店。", food: "雍和宫素斋、护国寺小吃" },
+      { day: "Day 3", title: "饕餮盛宴 · 智化寺明代古乐 ➔ 琉璃厂 ➔ 牛街正宗美食", distance: "市区打车", desc: "游智化寺现场聆听明代宫廷音乐；漫步琉璃厂古玩街；傍晚直奔牛街吃聚宝源涮肉、白记年糕与奶酪魏。", food: "牛街聚宝源、白记年糕、奶酪魏、吐鲁番羊肉串" },
+      { day: "Day 4", title: "水乡胡同 · 北海公园荡双桨 ➔ 什刹海西海湿地 ➔ 护国寺", distance: "市区散步", desc: "游北海公园划小船看白塔；漫步西海湿地公园木栈道看荷花与水鸟；逛护国寺胡同吃传统小吃。", food: "爆肚宛、老北京豆汁儿" },
+      { day: "Day 5", title: "天坛公园看大爷晨练 ➔ 返程", distance: "地铁5号线", desc: "漫步天坛公园看老北京大爷大妈打太极、踢毽子、拉二胡，体验地道京味烟火气后返程。", food: "南门涮肉、烧饼" }
     ]
   },
   {
     id: 4,
-    theme: "forest",
-    themeText: "🌲 森林氧吧长城",
-    title: "路线四：长城森林与氧吧四季风光 5日游",
-    subtitle: "慕田峪长城 · 喇叭沟门原始森林 · 怀柔雁栖湖 · 红螺山银杏 · 银山塔林",
-    highlights: ["【长城最美段】慕田峪长城（森林覆盖率96%）", "【北京北极】喇叭沟门白桦原始森林", "【山水湖光】怀柔雁栖湖环湖步道", "【松柏古塔】昌平银山塔林奇峰", "【森林公园】奥林匹克森林公园吸氧"],
-    budgetPerPerson: "1,900 - 3,300",
+    theme: "museum",
+    themeText: "🏛️ 文博学霸大满贯",
+    title: "路线四：【文博学霸大满贯】国家级博物馆人文深度 5天4晚",
+    subtitle: "中国国家博物馆 · 故宫珍宝钟表馆 · 中国科技馆 · 军事博物馆 · 首都博物馆 · 运河博物馆",
+    highlights: ["【文博巅峰】中国国家博物馆全天沉浸", "【宫廷奇珍】故宫珍宝馆与自动机械钟表馆", "【大国重器】军事博物馆歼20与导弹展", "【科学探索】中国科技馆与火车头大展", "【运河美学】北京大运河博物馆"],
+    budgetPerPerson: "1,450 - 2,600",
     itinerary: [
-      { day: "Day 1", title: "北京 ➔ 怀柔【慕田峪长城】", distance: "80 km / 1.5h", desc: "前往英国泰晤士报评选为中国最美长城的慕田峪段，乘缆车游览正关台与敌楼巨龙姿态。", food: "怀柔虹鳟鱼三吃、栗子焖肉" },
-      { day: "Day 2", title: "怀柔【喇叭沟门原始森林公园】", distance: "110 km / 2h", desc: "游览被称为北京北极的喇叭沟门原始森林，徒步白桦林保护区、南猴顶与千亩枫叶谷。", food: "满族二八席、烤野兔" },
-      { day: "Day 3", title: "怀柔【红螺山风景区】➔ 雁栖湖", distance: "45 km / 1h", desc: "游览红螺山漫步紫竹林与千亩古银杏林；下午游览雁栖湖环湖步道看水光山色。", food: "雁栖湖小鱼小虾、怀柔板栗" },
-      { day: "Day 4", title: "怀柔 ➔ 昌平【银山塔林风景区】", distance: "60 km / 1.2h", desc: "驶往昌平铁壁银山，游览耸立于悬崖与松柏林间的辽代古塔群与松涛阵阵。", food: "昌平十三陵王家梯子峪烙糕宴" },
-      { day: "Day 5", title: "奥林匹克森林公园 ➔ 顺利返程", distance: "市区散步", desc: "游览市区最大的天然森林氧吧公园奥林匹克森林公园湿地湖泊与仰山，随后返程。", food: "老北京炸酱面" }
+      { day: "Day 1", title: "大国气象 · 天安门 ➔ 中国国家博物馆全天", distance: "地铁1号线", desc: "全天深度游览中国国家博物馆（提前7天抢票），看《古代中国》后母戊鼎、四羊方尊等国宝。", food: "四季民福烤鸭、老北京面馆" },
+      { day: "Day 2", title: "科技与重器 · 中国科技馆 ➔ 鸟巢水立方", distance: "地铁8号线", desc: "游中国科技馆探索与发现展厅；游中国电影博物馆或铁道博物馆东郊展馆看巨大蒸汽火车头。", food: "奥体中心餐饮、铜锅涮肉" },
+      { day: "Day 3", title: "宫廷珍宝 · 故宫钟表馆/珍宝馆 ➔ 首都博物馆", distance: "地铁1号线", desc: "游故宫珍宝馆与钟表馆看清代宫廷机械钟表；下午游首都博物馆了解老北京建城建都史。", food: "老北京烤肉、小吃" },
+      { day: "Day 4", title: "军事大国 ➔ 军事博物馆 ➔ 北京天文馆", distance: "地铁9号线/4号线", desc: "游军事博物馆看歼-20模型、东风导弹与功勋坦克；游北京天文馆球幕影院观看浩瀚宇宙。", food: "西单美食、老北京爆肚" },
+      { day: "Day 5", title: "大运河文化 · 北京大运河博物馆 ➔ 返程", distance: "地铁6号线", desc: "前往通州游览北京大运河博物馆，感受古运河文化与现代建筑美学结合后返程。", food: "通州小吃、烤鸭" }
     ]
   },
   {
     id: 5,
-    theme: "heritage",
-    themeText: "🏯 胡同历史古迹",
-    title: "路线五：历史古迹与老北京胡同原汁原味 5日游",
-    subtitle: "故宫博物院 · 雍和宫大佛 · 国子监古树 · 智化寺明代宫廷音乐 · 法海寺明代壁画",
-    highlights: ["【绝版壁画】石景山法海寺570年明代壁画", "【宫廷音律】智化寺明代宫廷音乐活化石", "【千古学府】国子监与700年古柏树群", "【真老胡同】五道营/菊儿胡同原汁原味", "【藏传名刹】雍和宫18米整木白檀大佛"],
-    budgetPerPerson: "1,550 - 2,800",
+    theme: "gubei",
+    themeText: "🌌 京郊长城度假",
+    title: "路线五：【京郊长城度假】古北水镇与司马台夜景 5天4晚",
+    subtitle: "古北水镇无人机秀 · 司马台长城夜景 · 怀柔雁栖湖 · 慕田峪长城滑道 · 龙庆峡",
+    highlights: ["【长城脚下水乡】古北水镇夜景与孔明灯秀", "【最陡长城】司马台长城晨曦与缆车", "【APEC会址】怀柔雁栖湖湖光山色", "【滑道体验】慕田峪长城高速下山", "【北方小桂林】延庆龙庆峡峡谷舟行"],
+    budgetPerPerson: "2,200 - 4,200",
     itinerary: [
-      { day: "Day 1", title: "明清帝都核心 · 正阳门 ➔ 故宫博物院 ➔ 景山", distance: "市区步行", desc: "游览天安门、正阳门与故宫博物院紫禁城；登景山万春亭看紫禁城金碧辉煌落日。", food: "四季民福烤鸭、老北京炸酱面" },
-      { day: "Day 2", title: "古树古刹与儒释道 · 雍和宫 ➔ 国子监 ➔ 智化寺", distance: "市区轨道", desc: "朝圣雍和宫18米整木白檀大佛；游览国子监700年古柏；打卡智化寺聆听明代宫廷音乐。", food: "雍和宫素斋、护国寺小吃" },
-      { day: "Day 3", title: "真正民俗胡同水系 · 五道营胡同 ➔ 什刹海", distance: "市区步行", desc: "漫步五道营与雨儿胡同感受老北京生活；沿什刹海水系散步看银锭观山。", food: "爆肚宛、老北京豆汁儿、铜锅涮肉" },
-      { day: "Day 4", title: "明代壁画巅峰 · 石景山【法海寺】➔ 翠微山", distance: "30 km / 50m", desc: "参观法海寺沥粉贴金明代宫廷金丝壁画；游览八大处翠微山古刹森林。", food: "石景山京味小吃、烤肉" },
-      { day: "Day 5", title: "天坛古柏树群 ➔ 顺利返程", distance: "市区散步", desc: "游览天坛公园回音壁与百年古柏林，感受古代祭天礼仪人文哲学后顺利返程。", food: "南门涮肉" }
+      { day: "Day 1", title: "抵京 ➔ 密云【古北水镇】夜游无人机秀", distance: "自驾/专线 1.5h", desc: "前往密云区古北水镇，夜游水乡石板路，观赏望京楼水舞秀与数百架无人机孔明灯夜空秀。", food: "古北水镇古北烤鸭、水镇小吃" },
+      { day: "Day 2", title: "司马台长城缆车 ➔ 怀柔【雁栖湖】", distance: "60 km / 1h", desc: "搭缆车登司马台长城看晨雾中陡峭雄姿；驱车前往怀柔雁栖湖游览APEC会址湖光山色。", food: "怀柔虹鳟鱼三吃、烤羊腿" },
+      { day: "Day 3", title: "怀柔【慕田峪长城】滑道 ➔ 红螺山", distance: "45 km / 50m", desc: "游览慕田峪长城体验特色滑道下山；游红螺山/红螺寺漫步紫竹林与古松林。", food: "怀柔板栗烧鸡、农家菜" },
+      { day: "Day 4", title: "延庆百里山水画廊 ➔ 龙庆峡 / 野鸭湖", distance: "70 km / 1.2h", desc: "驾车行驶在延庆百里山水画廊自驾公路；游龙庆峡乘船穿行悬崖峡谷或野鸭湖湿地。", food: "延庆柳沟火盆锅" },
+      { day: "Day 5", title: "延庆【玉渡山】高山草甸 ➔ 市区返程", distance: "90 km / 1.5h", desc: "游览玉渡山自然风景区，漫步高山草甸与忘忧湖，午后驶回市区机场/车站返程。", food: "宫廷糕点" }
     ]
   }
 ];
@@ -104,17 +104,17 @@ function renderBeijingRoutes(routes) {
     <div class="route-card" onclick="openBeijingModal(${route.id})">
       <div>
         <div class="route-badge-row">
-          <span class="tag-badge duration">⏱️ 5 天精选</span>
+          <span class="tag-badge duration">⏱️ 5 天 4 晚</span>
           <span class="tag-badge theme">${route.themeText}</span>
-          <span class="tag-badge season">🍃 少人造·多自然</span>
+          <span class="tag-badge season">👍 高赞推荐</span>
         </div>
         <h3 class="route-title">${route.title}</h3>
         <div class="route-meta-row">
-          <span class="meta-item">📍 北京及京郊</span>
-          <span class="meta-item">🚘 建议自驾/包车</span>
+          <span class="meta-item">📍 北京全域</span>
+          <span class="meta-item">🚆 地铁 / 自驾 / 包车</span>
         </div>
         <div class="route-stops">
-          📍 <strong>路线核心看点：</strong><br>${route.subtitle}
+          📍 <strong>核心打卡路线：</strong><br>${route.subtitle}
         </div>
       </div>
       <div class="route-card-footer">
@@ -176,9 +176,9 @@ function openBeijingModal(id) {
     <h2 class="modal-title">${route.title}</h2>
     <p class="modal-subtitle">${route.subtitle}</p>
     <div style="display: flex; gap: 16px; margin-top: 14px; font-size: 13px; color: var(--primary);">
-      <span>📍 行程天数: 5 天</span>
-      <span>🏷️ 费用预估: ¥${route.budgetPerPerson} / 人</span>
-      <span>🍃 风格: 纯自然风光 & 真历史古迹</span>
+      <span>📍 行程天数: 5 天 4 晚</span>
+      <span>🏷️ 人均预估: ¥${route.budgetPerPerson}</span>
+      <span>👍 来源: 知乎/小红书高赞 & 本地人认可</span>
     </div>
   `;
 
@@ -190,7 +190,7 @@ function openBeijingModal(id) {
           <div class="timeline-day">${item.day}</div>
           <div class="timeline-content">
             <div class="tl-title">${item.title}</div>
-            <div class="tl-meta">🚗 交通/里程: ${item.distance}</div>
+            <div class="tl-meta">🚗 交通/用时: ${item.distance}</div>
             <div class="tl-desc">${item.desc}</div>
             <div class="tl-food">🍜 推荐地道餐饮: ${item.food}</div>
           </div>
@@ -268,7 +268,7 @@ function calculateBeijingBudget() {
 
   // Accommodation Cost (2 people per room)
   const rooms = Math.ceil(people / 2);
-  const hotelCost = rooms * hotelRate * days;
+  const hotelCost = rooms * hotelRate * (days - 1); // 4 nights
 
   // Food Cost
   const foodCost = people * foodRate * days;
